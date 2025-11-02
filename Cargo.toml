@@ -1,0 +1,23 @@
+[package]
+name = "candle_rag"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# ใช้จาก Git แทน crates.io เพื่อให้เวอร์ชันตรงกันหมด
+candle-core = { git = "https://github.com/huggingface/candle.git", package = "candle-core" }
+candle-nn = { git = "https://github.com/huggingface/candle.git", package = "candle-nn" }
+candle-transformers = { git = "https://github.com/huggingface/candle.git", package = "candle-transformers" }
+candle-datasets = { git = "https://github.com/huggingface/candle.git", package = "candle-datasets" }
+anyhow = "1.0.100"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hf-hub = "0.4.3"
+tokenizers = "0.15.0"
+libsql = "0.5.0"
+sqlite-vec = "0.1.6"
+zerocopy = "0.7.32"
+tokio = { version = "1.0", features = ["full"] }
+
+[features]
+default = []
